@@ -37,7 +37,7 @@ export function Header() {
       transition={{ duration: 0.5 }}
     >
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-20 md:h-24">
 
           {/* Logo */}
           <motion.div
@@ -47,12 +47,12 @@ export function Header() {
           >
             <a href="#home" onClick={(e) => handleNavClick(e, '#home')}>
               <img
-                src={isScrolled ? '/images/TicomsysLogos/Ticomsys Azul Marino.svg' : '/images/TicomsysLogos/Ticomsys Blanco.svg'}
-                alt="TICOMSYS"
-                className={`w-auto object-contain transition-all duration-300 ${
-                  isScrolled ? 'h-16' : 'h-20'
-                }`}
-              />
+                  src={isScrolled ? '/images/TicomsysLogos/Ticomsys Azul Marino.svg' : '/images/TicomsysLogos/Ticomsys Blanco.svg'}
+                  alt="TICOMSYS"
+                  className={`w-auto object-contain transition-all duration-300 ${
+                    isScrolled ? 'h-12 md:h-16' : 'h-14 md:h-20'
+                  }`}
+                />
             </a>
           </motion.div>
 

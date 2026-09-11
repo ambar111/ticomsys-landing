@@ -51,12 +51,12 @@ export function Hero() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2 }}
             >
-              <span className="text-blue-200 text-sm font-medium">
+              <span className="text-blue-200 text-xs sm:text-sm font-medium">
                 Excelencia tecnológica desde 1999
               </span>
             </motion.div>
 
-            <h1 className="text-white text-5xl md:text-7xl mb-6">
+            <h1 className="text-white text-3xl sm:text-4xl md:text-7xl mb-6 leading-tight">
               Transformamos tu{' '}
               <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
                 negocio
@@ -64,7 +64,7 @@ export function Hero() {
               con tecnología
             </h1>
 
-            <p className="text-blue-100 text-xl mb-8 leading-relaxed">
+            <p className="text-blue-100 text-base sm:text-lg md:text-xl mb-8 leading-relaxed">
               Soluciones IT integrales y profesionales. Desde infraestructura de redes 
               y ciberseguridad hasta desarrollo de software a medida, tratamiento archivístico, 
               organización documental y digitalización masiva de documentos.
@@ -72,24 +72,24 @@ export function Hero() {
 
             {/* Stats debajo del texto */}
             <motion.div
-              className="flex items-center gap-8 mb-8"
+              className="flex flex-wrap items-center gap-x-6 gap-y-4 sm:gap-8 mb-8"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.8 }}
             >
               <div>
-                <div className="text-white text-3xl font-bold">25+</div>
-                <div className="text-blue-200 text-sm">Años de experiencia</div>
+                <div className="text-white text-2xl sm:text-3xl font-bold">25+</div>
+                <div className="text-blue-200 text-xs sm:text-sm">Años de experiencia</div>
               </div>
-              <div className="w-px h-12 bg-blue-400/30" />
+              <div className="hidden sm:block w-px h-12 bg-blue-400/30" />
               <div>
-                <div className="text-white text-3xl font-bold">500+</div>
-                <div className="text-blue-200 text-sm">Clientes satisfechos</div>
+                <div className="text-white text-2xl sm:text-3xl font-bold">500+</div>
+                <div className="text-blue-200 text-xs sm:text-sm">Clientes satisfechos</div>
               </div>
-              <div className="w-px h-12 bg-blue-400/30" />
+              <div className="hidden sm:block w-px h-12 bg-blue-400/30" />
               <div>
-                <div className="text-white text-3xl font-bold">98%</div>
-                <div className="text-blue-200 text-sm">Tasa de éxito</div>
+                <div className="text-white text-2xl sm:text-3xl font-bold">98%</div>
+                <div className="text-blue-200 text-xs sm:text-sm">Tasa de éxito</div>
               </div>
             </motion.div>
           </motion.div>

@@ -41,7 +41,7 @@ function StatItem({ end, suffix = '', label, duration = 2 }: StatItemProps) {
       transition={{ duration: 0.6 }}
     >
       <motion.div
-        className="text-5xl md:text-6xl font-bold text-white mb-2"
+        className="text-3xl sm:text-4xl md:text-6xl font-bold text-white mb-2"
         initial={{ scale: 0.5 }}
         whileInView={{ scale: 1 }}
         viewport={{ once: true }}

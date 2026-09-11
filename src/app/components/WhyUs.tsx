@@ -131,7 +131,7 @@ export function WhyUs() {
 
               {/* Stats Card Overlay */}
               <motion.div
-                className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-2xl p-6 border border-gray-100"
+                className="absolute -bottom-3 -left-3 sm:-bottom-6 sm:-left-6 bg-white rounded-xl shadow-2xl p-4 sm:p-6 border border-gray-100"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -150,13 +150,13 @@ export function WhyUs() {
 
               {/* Experience Badge */}
               <motion.div
-                className="absolute -top-6 -right-6 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-xl shadow-2xl p-6 text-white"
+                className="absolute -top-3 -right-3 sm:-top-6 sm:-right-6 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-xl shadow-2xl p-4 sm:p-6 text-white"
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.3 }}
               >
-                <div className="text-4xl font-bold mb-1">25+</div>
+                <div className="text-2xl sm:text-4xl font-bold mb-1">25+</div>
                 <div className="text-sm text-white/90">Años de experiencia</div>
               </motion.div>
             </div>

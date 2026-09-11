@@ -17,7 +17,7 @@ export function TimelineSection() {
           {timeline.map((item, index) => (
             <motion.div
               key={item.year}
-              className={`flex items-center gap-8 ${
+              className={`flex flex-col lg:flex-row items-center gap-8 ${
                 index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
               }`}
               initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
@@ -25,7 +25,7 @@ export function TimelineSection() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
             >
-              <div className={`flex-1 ${index % 2 === 0 ? 'lg:text-right' : 'lg:text-left'}`}>
+              <div className={`w-full lg:flex-1 ${index % 2 === 0 ? 'lg:text-right' : 'lg:text-left'}`}>
                 <Card className="p-6 inline-block hover:shadow-xl transition-shadow border-blue-100">
                   <div className="text-3xl font-bold text-blue-700 mb-2">{item.year}</div>
                   <h4 className="font-semibold text-xl text-gray-900 mb-2">{item.title}</h4>
@@ -37,7 +37,7 @@ export function TimelineSection() {
                 <div className="w-6 h-6 bg-gradient-to-br from-blue-700 to-cyan-500 rounded-full border-4 border-white shadow-lg" />
               </div>
 
-              <div className="flex-1" />
+              <div className="hidden lg:block flex-1" />
             </motion.div>
           ))}
         </div>
