@@ -156,7 +156,7 @@ export function WhyUs() {
                 viewport={{ once: true }}
                 transition={{ delay: 0.3 }}
               >
-                <div className="text-2xl sm:text-4xl font-bold mb-1">25+</div>
+                <div className="text-2xl sm:text-4xl font-bold mb-1">+S25</div>
                 <div className="text-sm text-white/90">Años de experiencia</div>
               </motion.div>
             </div>

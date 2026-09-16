@@ -65,33 +65,12 @@ export function Hero() {
             </h1>
 
             <p className="text-blue-100 text-base sm:text-lg md:text-xl mb-8 leading-relaxed">
-              Soluciones IT integrales y profesionales. Desde infraestructura de redes 
+              Soluciones TI (Tecnología de la Información) integrales y profesionales. Desde infraestructura de redes 
               y ciberseguridad hasta desarrollo de software a medida, tratamiento archivístico, 
               organización documental y digitalización masiva de documentos.
             </p>
 
-            {/* Stats debajo del texto */}
-            <motion.div
-              className="flex flex-wrap items-center gap-x-6 gap-y-4 sm:gap-8 mb-8"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.8 }}
-            >
-              <div>
-                <div className="text-white text-2xl sm:text-3xl font-bold">25+</div>
-                <div className="text-blue-200 text-xs sm:text-sm">Años de experiencia</div>
-              </div>
-              <div className="hidden sm:block w-px h-12 bg-blue-400/30" />
-              <div>
-                <div className="text-white text-2xl sm:text-3xl font-bold">500+</div>
-                <div className="text-blue-200 text-xs sm:text-sm">Clientes satisfechos</div>
-              </div>
-              <div className="hidden sm:block w-px h-12 bg-blue-400/30" />
-              <div>
-                <div className="text-white text-2xl sm:text-3xl font-bold">98%</div>
-                <div className="text-blue-200 text-xs sm:text-sm">Tasa de éxito</div>
-              </div>
-            </motion.div>
+            
           </motion.div>
 
           <motion.div

@@ -5,6 +5,7 @@ import { FaMicrosoft } from 'react-icons/fa';
 export interface Partner {
   name: string;
   logo: string;
+  scale?: number;
 }
 
 export const featuredPartner: Partner = {
@@ -15,14 +16,14 @@ export const featuredPartner: Partner = {
 export const partners: Partner[] = [
   { name: 'APC', logo: '/images/Partners/APC.png' },
   { name: 'Canon', logo: '/images/Partners/Canon.svg' },
-  { name: 'Dell Technologies', logo: '/images/Partners/DellTechnologies.svg' },
+  { name: 'Dell Technologies', logo: '/images/Partners/DellTechnologies.svg', scale: 2.2 },
   { name: 'Epson', logo: '/images/Partners/Epson.png' },
   { name: 'Fujitsu', logo: '/images/Partners/Fujitsu.svg' },
   { name: 'Grandstream', logo: '/images/Partners/Grandstream.webp' },
   { name: 'HP', logo: '/images/Partners/HP.webp' },
   { name: 'Kodak Alaris', logo: '/images/Partners/KodakAlaris.png' },
   { name: 'Microsoft', logo: '/images/Partners/Microsoft.png' },
-  { name: 'Nexxt Solutions', logo: '/images/Partners/NexxtSolutions.png' },
-  { name: 'Norton', logo: '/images/Partners/Norton.png' },
-  { name: 'Ubiquiti', logo: '/images/Partners/Ubiquiti-logo-dark.png' },
+  { name: 'Nexxt Solutions', logo: '/images/Partners/NexxtSolutions.png', scale: 1.3 },
+  { name: 'Norton', logo: '/images/Partners/Norton.png', scale: 1.3 },
+  { name: 'Ubiquiti', logo: '/images/Partners/Ubiquiti-logo-dark.png', scale: 1.4 },
 ];

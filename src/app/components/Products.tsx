@@ -1,5 +1,7 @@
 import { motion } from 'motion/react';
 import { Boxes, Users } from 'lucide-react';
+import { DiMsqlServer } from 'react-icons/di';
+import { GrOracle } from 'react-icons/gr';
 import { Card } from './ui/card';
 import { SectionHeading } from './shared/SectionHeading';
 
@@ -16,10 +18,9 @@ const products = [
       'Preservación a largo plazo de información importante',
     ],
     logo: '/images/AquariusLogos/Aquarius%20Azul%20Degradado.svg',
-    scale: 1
   },
   {
-    title: 'AQuarius WEB',
+    title: 'AQweb',
     subtitle: 'Consulta Documental en Línea',
     description:
       'Módulo web que permite consultar y buscar documentos desde cualquier navegador, sin instalar software adicional, con acceso controlado por usuario.',
@@ -30,7 +31,6 @@ const products = [
       'Control de permisos por usuario o departamento',
     ],
     logo: '/images/AquariusLogos/Aquarius%20WEB.svg',
-    scale: 1.4
   },
   {
     title: 'AQuarius WebCan',
@@ -44,7 +44,6 @@ const products = [
       'Integración directa con el flujo de digitalización',
     ],
     logo: '/images/AquariusLogos/Aquarius%20WEBCAN.svg',
-    scale: 1
   },
   {
     title: 'AQuarius DMS',
@@ -58,13 +57,12 @@ const products = [
       'Distribución ágil a usuarios autorizados',
     ],
     logo: '/images/AquariusLogos/Aquarius%20DMS.svg',
-    scale: 1
   },
   {
     title: 'AQuarius Cloud',
     subtitle: 'Solución en la Nube',
     description:
-      'Módulo especializado que permite digitalizar documentos localmente y almacenarlos en línea en servidores de TICOMSYS, accesible desde cualquier lugar sin necesidad de invertir en equipos o software de terceros.',
+      'Módulo especializado que permite digitalizar documentos localmente y almacenarlos en línea en servidores de TICOMSYS, servidores locales u otra nube propiedad del cliente, accesible desde cualquier lugar sin necesidad de invertir en equipos o software de terceros.',
     features: [
       'Digitalización y almacenamiento en la nube',
       'Acceso remoto desde cualquier dispositivo',
@@ -72,29 +70,26 @@ const products = [
       'Escalabilidad según necesidades del negocio',
     ],
     logo: '/images/AquariusLogos/Aquarius%20CLOUD.svg',
-    scale: 1
   },
   {
     title: 'AQuarius Forms',
     subtitle: 'Captura Digital de Formularios',
-    description:
-      'Módulo para el diseño y captura de formularios digitales, que sustituye el llenado en papel y alimenta directamente el flujo documental de AQuarius.',
+    description: 'Módulo para el diseño y captura de formularios físicos a digitales',
     features: [
       'Diseño de formularios digitales personalizados',
       'Captura de datos validada en tiempo real',
-      'Integración directa con AQuarius DMS',
+      'Integración directa con AQWeb',
       'Reducción de errores frente al llenado en papel',
     ],
     logo: '/images/AquariusLogos/Aquarius%20FORMS.svg',
-    scale: 1
   },
 ];
 
 const integrations = [
-  { name: 'SQL Server', logo: '/images/Base%20de%20datos/SQLserver.png' },
-  { name: 'Oracle', logo: '/images/Base%20de%20datos/Oracle.webp' },
-  { name: 'ERP Systems', icon: Boxes },
-  { name: 'CRM Systems', icon: Users },
+  { name: 'SQL Server', icon: DiMsqlServer, color: 'text-[#CC2927]' },
+  { name: 'Oracle', icon: GrOracle, color: 'text-[#F80000]' },
+  { name: 'ERP Systems', icon: Boxes, color: 'text-blue-700' },
+  { name: 'CRM Systems', icon: Users, color: 'text-blue-700' },
 ];
 
 export function Products() {
@@ -141,7 +136,6 @@ export function Products() {
                     src={product.logo}
                     alt={product.title}
                     className="max-h-full max-w-full object-contain"
-                    style={{ transform: `scale(${product.scale ?? 1})` }}
                   />
                 </motion.div>
 
@@ -211,7 +205,7 @@ export function Products() {
             <p className="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">
               AQuarius puede integrarse con bases de datos y sistemas empresariales como:
             </p>
-             <div className="flex flex-wrap justify-center gap-6">
+            <div className="flex flex-wrap justify-center gap-6">
               {integrations.map((integration, index) => (
                 <motion.div
                   key={integration.name}
@@ -222,18 +216,8 @@ export function Products() {
                   transition={{ delay: index * 0.1 }}
                   whileHover={{ scale: 1.05 }}
                 >
-                  {'logo' in integration ? (
-                    <img
-                      src={integration.logo}
-                      alt={integration.name}
-                      className="h-7 w-auto object-contain"
-                    />
-                  ) : (
-                    <>
-                      <integration.icon className="text-blue-700" size={26} />
-                      <span className="text-gray-800 font-semibold">{integration.name}</span>
-                    </>
-                  )}
+                  <integration.icon className={integration.color} size={26} />
+                  <span className="text-gray-800 font-semibold">{integration.name}</span>
                 </motion.div>
               ))}
             </div>

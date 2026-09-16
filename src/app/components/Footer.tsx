@@ -46,8 +46,8 @@ export function Footer() {
               </a>
 
             <p className="text-gray-400 mb-6 leading-relaxed">
-              Soluciones tecnológicas integrales con el compromiso y calidez de una empresa familiar.
-              Transformando negocios desde 1995.
+              Soluciones tecnológicas integrales con el compromiso y calidez de una empresa de servicios.
+              Transformando negocios desde 1999.
             </p>
 
             <div className="space-y-3">

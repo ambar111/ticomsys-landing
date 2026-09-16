@@ -21,32 +21,37 @@ export function Partners() {
           subtitle="Trabajamos con los líderes tecnológicos más importantes del mundo"
         />
 
-        {/* Aliado principal */}
+         {/* Aliado principal */}
         <motion.div
-          className="max-w-md mx-auto mb-14"
+          className="flex flex-col items-center gap-6 mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <div className="relative bg-gradient-to-br from-blue-700/20 to-cyan-500/10 border border-blue-400/30 rounded-2xl p-10 text-center backdrop-blur-sm">
-            <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-xs font-semibold rounded-full shadow-lg">
-              ALIADO PRINCIPAL
-            </span>
-             <img
-              src={featuredPartner.logo}
-              alt={featuredPartner.name}
-              className="h-24 w-auto object-contain mx-auto mt-2"
-            />
-          </div>
+          <span className="px-4 py-1 bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-xs font-semibold rounded-full shadow-lg">
+            ALIADO PRINCIPAL
+          </span>
+          <img
+            src={featuredPartner.logo}
+            alt={featuredPartner.name}
+            className="h-32 sm:h-36 w-auto object-contain"
+          />
         </motion.div>
       </div>
 
-                  <InfiniteMarquee
+                       <InfiniteMarquee
         items={partners}
         direction="left"
         durationSeconds={70}
-        cardClassName="bg-white rounded-2xl shadow-lg w-40 h-24"
-        imgClassName="max-h-10 max-w-[75%] w-auto object-contain"
+        cardClassName="bg-white rounded-2xl shadow-lg w-60 h-24"
+        renderItem={(item) => (
+          <img
+            src={item.logo}
+            alt={item.name}
+            className="max-h-14 max-w-[85%] w-auto object-contain"
+            style={{ transform: `scale(${item.scale ?? 1})` }}
+          />
+        )}
       />
     </section>
   );
