@@ -11,14 +11,13 @@ const footerLinks = {
   empresa: [
     { label: 'Sobre Nosotros', href: '#about' },
     { label: 'Por qué Elegirnos', href: '#why-us' },
-    { label: 'Casos de Éxito', href: '#' },
-    { label: 'Carreras', href: '#' },
+    { label: 'Casos de Éxito', href: '#clients' },
   ],
   recursos: [
-    { label: 'Blog', href: '#' },
-    { label: 'Documentación', href: '#' },
-    { label: 'Soporte', href: '#' },
-    { label: 'FAQ', href: '#' },
+    { label: 'Blog', href: null },
+    { label: 'Documentación', href: null },
+    { label: 'Soporte', href: null },
+    { label: 'FAQ', href: '#faq' },
   ],
 };
 
@@ -79,12 +78,18 @@ export function Footer() {
               <ul className="space-y-3">
                 {links.map((link) => (
                   <li key={link.label}>
-                    <a
-                      href={link.href}
-                      className="text-gray-400 hover:text-white transition-colors inline-block"
-                    >
-                      {link.label}
-                    </a>
+                    {link.href ? (
+                      <a
+                        href={link.href}
+                        className="text-gray-400 hover:text-white transition-colors inline-block"
+                      >
+                        {link.label}
+                      </a>
+                    ) : (
+                      <span className="text-gray-500 inline-block cursor-default">
+                        {link.label}
+                      </span>
+                    )}
                   </li>
                 ))}
               </ul>
