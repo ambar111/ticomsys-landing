@@ -31,6 +31,9 @@ const products = [
       'Control de permisos por usuario o departamento',
     ],
     logo: '/images/AquariusLogos/Aquarius%20WEB.svg',
+    // El SVG de este logo tiene un viewBox más grande que el resto (180.34 vs 125.07),
+    // por lo que se renderiza más pequeño; se escala para igualar el tamaño visual de los demás.
+    logoScale: 180.34 / 125.07,
   },
   {
     title: 'AQuarius WebCan',
@@ -43,7 +46,7 @@ const products = [
       'Indexación automática mediante etiquetas',
       'Integración directa con el flujo de digitalización',
     ],
-    logo: '/images/AquariusLogos/Aquarius%20WEBCAN.svg',
+    logo: '/images/AquariusLogos/Aquarius%20WEBSCAN.png',
   },
   {
     title: 'AQuarius DMS',
@@ -56,20 +59,20 @@ const products = [
       'Indexación y anotaciones en documentos',
       'Distribución ágil a usuarios autorizados',
     ],
-    logo: '/images/AquariusLogos/Aquarius%20DMS.svg',
+    logo: '/images/AquariusLogos/Aquarius%20DMS.png',
   },
   {
     title: 'AQuarius Cloud',
     subtitle: 'Solución en la Nube',
     description:
-      'Módulo especializado que permite digitalizar documentos localmente y almacenarlos en línea en servidores de TICOMSYS, servidores locales u otra nube propiedad del cliente, accesible desde cualquier lugar sin necesidad de invertir en equipos o software de terceros.',
+      'Módulo especializado que permite digitalizar documentos localmente y almacenarlos en línea en servidores de AQuarius Software ubicados estratégicamente para mayor seguridad, accesible desde cualquier lugar sin necesidad de invertir en equipos o software de terceros.',
     features: [
       'Digitalización y almacenamiento en la nube',
       'Acceso remoto desde cualquier dispositivo',
       'Sin inversión en infraestructura local',
       'Escalabilidad según necesidades del negocio',
     ],
-    logo: '/images/AquariusLogos/Aquarius%20CLOUD.svg',
+    logo: '/images/AquariusLogos/Aquarius%20CLOUD.png',
   },
   {
     title: 'AQuarius Forms',
@@ -81,7 +84,7 @@ const products = [
       'Integración directa con AQWeb',
       'Reducción de errores frente al llenado en papel',
     ],
-    logo: '/images/AquariusLogos/Aquarius%20FORMS.svg',
+    logo: '/images/AquariusLogos/Aquarius%20FORMS.png',
   },
 ];
 
@@ -136,6 +139,7 @@ export function Products() {
                     src={product.logo}
                     alt={product.title}
                     className="max-h-full max-w-full object-contain"
+                    style={product.logoScale ? { transform: `scale(${product.logoScale})` } : undefined}
                   />
                 </motion.div>
 
