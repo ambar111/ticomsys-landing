@@ -46,7 +46,7 @@ const products = [
       'Indexación automática mediante etiquetas',
       'Integración directa con el flujo de digitalización',
     ],
-    logo: '/images/AquariusLogos/Aquarius%20WEBCAN.svg',
+    logo: '/images/AquariusLogos/Aquarius%20WEBSCAN.png',
   },
   {
     title: 'AQuarius DMS',
@@ -59,7 +59,7 @@ const products = [
       'Indexación y anotaciones en documentos',
       'Distribución ágil a usuarios autorizados',
     ],
-    logo: '/images/AquariusLogos/Aquarius%20DMS.svg',
+    logo: '/images/AquariusLogos/Aquarius%20DMS.png',
   },
   {
     title: 'AQuarius Cloud',
@@ -72,7 +72,7 @@ const products = [
       'Sin inversión en infraestructura local',
       'Escalabilidad según necesidades del negocio',
     ],
-    logo: '/images/AquariusLogos/Aquarius%20CLOUD.svg',
+    logo: '/images/AquariusLogos/Aquarius%20CLOUD.png',
   },
   {
     title: 'AQuarius Forms',
@@ -84,7 +84,7 @@ const products = [
       'Integración directa con AQWeb',
       'Reducción de errores frente al llenado en papel',
     ],
-    logo: '/images/AquariusLogos/Aquarius%20FORMS.svg',
+    logo: '/images/AquariusLogos/Aquarius%20FORMS.png',
   },
 ];
 
